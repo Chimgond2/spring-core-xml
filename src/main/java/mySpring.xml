@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<bean id="ok" class="com.ty.core.Pen"></bean>
+<bean id="mymobile" class="com.ty.core.Mobile"></bean>
+
+<bean id="stud" class="com.ty.core.Student">
+<constructor-arg index="0" value="pojo"></constructor-arg>
+<constructor-arg index="1" value="90.3"></constructor-arg>
+</bean>
+
+<bean id="emp" class="com.ty.core.Employee">
+<constructor-arg index="0" value="teju"></constructor-arg>
+<constructor-arg index="1" value="5"></constructor-arg>
+</bean>	
+
+<bean id="com" class="com.ty.core.Computer">
+<property name="cost" value="2000"></property>
+<property name="id" value="69"></property>
+<property name="name" value="Dell"></property>
+</bean>
+    
+
+</beans>
+

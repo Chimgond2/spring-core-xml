@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+            
+            
+            <bean id="myMusic" class="com.ty.core.MusicSystem"></bean>
+            <bean id="mycar" class="com.ty.core.Car" >
+            <constructor-arg ref="myMusic"></constructor-arg>
+            
+            </bean>
+            
+            
+            <bean id="mypan" class="com.ty.core.Pan">
+            <constructor-arg index="0" value="123"></constructor-arg>
+            <constructor-arg index="1" value="india"></constructor-arg>
+            
+            </bean>
+             <bean id="myperson" class="com.ty.core.Person">
+             <constructor-arg index="0" value="1"></constructor-arg>
+             <constructor-arg index="1" value="chandu"></constructor-arg>
+             
+             
+             <constructor-arg ref="mypan"></constructor-arg>
+             
+             </bean>
+             
+             
+             
+             <bean id="Engine" class="com.ty.core.Engine"></bean>
+             
+             <bean id="bike" class="com.ty.core.Bike">
+             <property name="engine" ref="Engine"></property>
+             </bean>
+             
+</beans>
